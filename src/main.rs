@@ -32,4 +32,15 @@ fn main() {
     let i_ref = &i;
     println!("i ref is {}", i_ref);
     println!("i ref derrefed is {}", *i_ref);
+
+    // References
+    let ints = [1, 2, 3, 4, 5];
+    let slice = &ints;
+    let first = slice.get(0);
+    let last = ints.get(5).unwrap_or(&-2);
+
+    println!("first1 {:?}", slice.first());
+    println!("first2 {:?}", ints.first());
+
+    println!("last is {:?}", last);
 }
